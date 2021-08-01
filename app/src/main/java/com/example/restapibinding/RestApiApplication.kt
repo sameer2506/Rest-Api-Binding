@@ -4,6 +4,7 @@ import android.app.Application
 import com.example.restapibinding.data.db.AppDatabase
 import com.example.restapibinding.data.network.PincodeApi
 import com.example.restapibinding.data.network.NetworkConnectionInterceptor
+import com.example.restapibinding.data.network.WeatherApi
 import com.example.restapibinding.data.repositories.UserRepository
 import com.example.restapibinding.data.repositories.WeatherRepository
 import com.example.restapibinding.ui.registration.RegistrationVMF
@@ -22,6 +23,7 @@ class RestApiApplication : Application(), KodeinAware {
         import(androidXModule(this@RestApiApplication))
         bind() from singleton { NetworkConnectionInterceptor(instance()) }
         bind() from singleton { PincodeApi(instance()) }
+        bind() from singleton { WeatherApi(instance()) }
         bind() from singleton { AppDatabase(instance()) }
         bind() from singleton { UserRepository(instance(), instance()) }
         bind() from singleton { WeatherRepository(instance(), instance()) }

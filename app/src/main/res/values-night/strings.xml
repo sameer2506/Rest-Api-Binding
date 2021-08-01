@@ -1,6 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">RestApi Binding</string>
-    <string name="_0_0_0000">0/0/0000</string>
     <string name="mobile_number">Mobile Number</string>
     <string name="full_name">Full Name</string>
     <string name="gender">Gender</string>
@@ -18,8 +17,6 @@
     <string name="temperature_in_fahrenheit">Temperature in Fahrenheit :</string>
     <string name="latitude">Latitude :</string>
     <string name="longitude">Longitude :</string>
-    <string name="registration">Registration</string>
-    <string name="weather">Weather</string>
     <string name="u2103">℃</string>
     <string name="u2109">℉</string>
 </resources>

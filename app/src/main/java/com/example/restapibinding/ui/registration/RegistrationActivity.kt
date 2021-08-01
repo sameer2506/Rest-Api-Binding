@@ -36,6 +36,11 @@ class RegistrationActivity : AppCompatActivity(), KodeinAware {
 
     private lateinit var view: View
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -125,11 +130,11 @@ class RegistrationActivity : AppCompatActivity(), KodeinAware {
             return
         }
 
-        if(validateET(binding.etFullName.editText!!) || validateET(binding.etDOB) ||
-            validateET(binding.etAddressLine1.editText!!) || validateET(binding.etPincode.editText!!) ||
+        if(!validateET(binding.etFullName.editText!!) || !validateET(binding.etDOB) ||
+            !validateET(binding.etAddressLine1.editText!!) || !validateET(binding.etPincode.editText!!) ||
             binding.etGender.text == null
         ){
-            toast("Field is required.")
+            return
         }
         val addressLine1 = binding.etAddressLine1.editText?.text.toString()
         val addressLine2 = binding.etAddressLine2.editText?.text.toString()
